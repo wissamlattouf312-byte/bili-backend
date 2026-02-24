@@ -78,7 +78,8 @@ class Settings(BaseSettings):
     SOCKET_GRACE_PERIOD_SECONDS: int = int(os.getenv("SOCKET_GRACE_PERIOD_SECONDS", "60"))
     
     # CORS - Allow frontend origins (set CORS_ORIGINS in .env for production, e.g. https://your-app.netlify.app)
-    CORS_ORIGINS: List[str] = []
+    # Note: treat env as raw string; we build the list manually in __init__ to avoid pydantic parsing issues.
+    CORS_ORIGINS: str | None = None
     
     class Config:
         env_file = ".env"
