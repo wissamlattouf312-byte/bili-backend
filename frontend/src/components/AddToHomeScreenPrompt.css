@@ -1,0 +1,124 @@
+.add-to-home-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.add-to-home-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.add-to-home-card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 360px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-home-title {
+  font-size: 20px;
+  color: #1a237e;
+  margin-bottom: 8px;
+}
+
+.add-to-home-desktop-fallback {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.add-to-home-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.add-to-home-instructions,
+.add-to-home-steps {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.add-to-home-steps-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.add-to-home-steps ol,
+.add-to-home-steps ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.add-to-home-steps li {
+  margin-bottom: 6px;
+}
+
+.add-to-home-icon {
+  opacity: 0.8;
+}
+
+.add-to-home-primary {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 14px rgba(26, 35, 126, 0.4);
+}
+
+.add-to-home-primary:hover,
+.add-to-home-primary:focus {
+  opacity: 0.95;
+}
+
+.add-to-home-primary:active {
+  transform: scale(0.98);
+}
+
+.add-to-home-primary:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.add-to-home-dismiss {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-to-home-dismiss:hover,
+.add-to-home-dismiss:focus {
+  background: #f5f5f5;
+}
+
+.add-to-home-dismiss:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,135 @@
+/**
+ * BILI Master System - Flashing Claim Button Styles
+ * Prominent, glowing/flashing button for claiming businesses
+ */
+
+.claim-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.claim-button-container.prominent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.claim-button-label {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.claim-button-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.claim-button {
+  /* Base styling */
+  padding: 18px 36px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.claim-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.claim-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.claim-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.6);
+}
+
+.claim-button:active {
+  transform: translateY(0);
+}
+
+.claim-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Flashing animation */
+.claim-button.flashing {
+  animation: flashGlow 2s ease-in-out infinite;
+}
+
+@keyframes flashGlow {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4),
+                0 0 0 0 rgba(102, 126, 234, 0.7);
+  }
+  50% {
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6),
+                0 0 0 10px rgba(102, 126, 234, 0),
+                0 0 0 20px rgba(102, 126, 234, 0);
+  }
+}
+
+/* Pulse effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.claim-button.flashing {
+  animation: flashGlow 2s ease-in-out infinite, pulse 3s ease-in-out infinite;
+}
+
+.claim-error {
+  margin-top: 10px;
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .claim-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,546 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.App.app-clean-v1 {
+  min-height: 100vh;
+  padding-top: 52px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header-clean {
+  width: 100%;
+  max-width: 960px;
+  padding: 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  color: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.app-header-clean h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.app-header-clean p {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.app-header-install {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a237e;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-header-install:hover,
+.app-header-install:focus {
+  opacity: 0.95;
+  background: #f5f5f5;
+}
+
+.app-tabs {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 8px;
+}
+
+.app-tab {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.app-tab:hover {
+  color: #1a237e;
+}
+
+.app-tab--active {
+  color: #1a237e;
+  border-bottom-color: #1a237e;
+}
+
+.app-main-clean {
+  width: 100%;
+  max-width: 960px;
+  padding: 20px;
+  background: #fff;
+  min-height: 50vh;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tab-panel h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.tab-panel p {
+  font-size: 14px;
+  color: #666;
+}
+
+.tab-panel__section {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tab-panel__section h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.tab-panel__hint {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.robo-radar-claimed {
+  margin-top: 16px;
+}
+
+.robo-radar-claimed-msg {
+  font-size: 14px;
+  color: #555;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.radar-list {
+  margin-top: 20px;
+}
+
+.radar-list h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.radar-list__list {
+  list-style: none;
+}
+
+.radar-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.radar-list__item:last-child {
+  border-bottom: none;
+}
+
+.radar-list__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+}
+
+.radar-list__subtitle {
+  font-size: 13px;
+  color: #666;
+}
+
+.store-feed__subtitle {
+  font-size: 13px;
+  color: #1a237e;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.store-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.store-feed__promo-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  background: #ff9800;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
+.store-feed__item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.store-feed__item:hover {
+  background: #f0f0f0;
+  border-color: #ddd;
+}
+
+.store-feed__item--selected {
+  background: #e8eaf6;
+  border-color: #1a237e;
+}
+
+.store-feed__distance {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.store-feed__thumb {
+  width: 80px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-feed__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.store-feed__thumb-placeholder {
+  font-size: 12px;
+  color: #555;
+}
+
+.store-feed__meta h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.store-feed__meta p {
+  font-size: 13px;
+  color: #666;
+}
+
+.store-feed__status {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #555;
+}
+
+.store-feed__status--error {
+  color: #b00020;
+}
+
+.store-feed__status-wrap {
+  margin-top: 12px;
+}
+
+.store-feed__no-nearby .store-feed__status {
+  margin-bottom: 6px;
+}
+
+.store-feed__status-hint {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.store-feed__status-wrap .store-feed__status {
+  margin-bottom: 10px;
+}
+
+.store-feed__use-demo-btn,
+.store-feed__try-again-btn {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a237e;
+  background: #fff;
+  border: 1px solid #1a237e;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.store-feed__use-demo-btn:hover,
+.store-feed__try-again-btn:hover {
+  background: #e8eaf6;
+}
+
+.store-feed__fallback-wrap {
+  margin-bottom: 10px;
+}
+
+.store-feed__fallback {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.store-feed__fallback strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.store-feed__detail {
+  margin-top: 16px;
+  padding: 16px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+}
+
+.store-feed__detail-inner h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1a237e;
+}
+
+.store-feed__detail-inner p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.store-feed__detail-distance {
+  font-size: 13px;
+  color: #666;
+}
+
+.store-feed__detail-nav {
+  margin-right: 8px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #1a237e;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.store-feed__detail-nav:hover {
+  background: #3949ab;
+}
+
+.store-feed__detail-close {
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a237e;
+  background: #fff;
+  border: 1px solid #1a237e;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.store-feed__detail-close:hover {
+  background: #1a237e;
+  color: #fff;
+}
+
+/* Wallet (Profile tab) */
+.wallet {
+  margin-top: 8px;
+}
+
+.wallet__header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.wallet__label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.wallet__balance {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a237e;
+}
+
+.wallet__hospitality-status {
+  font-size: 14px;
+  color: #333;
+}
+
+.wallet__add-to-home {
+  width: 100%;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(26, 35, 126, 0.3);
+}
+
+.wallet__add-to-home:hover,
+.wallet__add-to-home:focus {
+  opacity: 0.95;
+}
+
+.wallet__add-to-home:active {
+  transform: scale(0.98);
+}
+
+.wallet__referral {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.wallet__referral h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.wallet__referral-hint {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.wallet__referral-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.wallet__referral-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.wallet__referral-copy {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a237e;
+  background: #fff;
+  border: 1px solid #1a237e;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wallet__referral-copy:hover {
+  background: #1a237e;
+  color: #fff;
+}
+
+.wallet__referral-empty {
+  font-size: 14px;
+  color: #666;
+}
+
+.wallet__ledger {
+  margin-top: 16px;
+}
+
+.wallet__ledger h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.wallet__status {
+  font-size: 14px;
+  color: #888;
+}
+
+.wallet__ledger-list {
+  list-style: none;
+}
+
+.wallet__ledger-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.wallet__ledger-main {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.wallet__ledger-amount {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.wallet__ledger-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+.wallet__ledger-meta {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}

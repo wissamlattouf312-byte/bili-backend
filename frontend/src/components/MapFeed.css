@@ -1,0 +1,95 @@
+.map-feed__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.map-feed__item {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.map-feed__item:last-child {
+  border-bottom: none;
+}
+
+.map-feed__thumb-btn {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.map-feed__thumb-btn:hover {
+  opacity: 0.9;
+}
+
+.map-feed__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-feed__thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+  color: #fff;
+}
+
+.map-feed__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.map-feed__meta strong {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.map-feed__vip {
+  font-size: 10px;
+  background: #ffc107;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.map-feed__vicinity,
+.map-feed__desc {
+  font-size: 12px;
+  color: #666;
+  margin: 2px 0 0 0;
+}
+
+.map-feed__distance {
+  font-size: 12px;
+  color: #666;
+  margin-right: 8px;
+}
+
+.map-feed__nav-hint {
+  font-size: 11px;
+  color: #1a237e;
+  display: block;
+  margin-top: 4px;
+}
+
+.map-feed__empty {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
